@@ -6,27 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Practice 2</title>
 </head>
+<style>
+    .hidden{
+        display : none;
+    }
+</style>
 <body>
-   <h1>Practice Two</h1> 
-   <div class="container">
-    <div class="card-deck text-center">
-          <div id="pro-plan" class="card mb-4 shadow-sm">
-        <div class="card-header">
-          <h3 class="my-0 font-weight-normal">Pro</h3>
+    <p>PRACTICE 2</p>
+    <div>
+    
+    <h2>Click button to display time</h2>
+    <h3 id="time"></h3>
+    <div id="paragraf" class="hidden">
+
+       <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
         </div>
-        <div class="card-body">
-          <h4 class="card-title pricing-card-title">$<span class="pricing">30 / month</span></h4>
-          <ul class="list-unstyled mt-3 mb-4">
-            <li>100 users included</li>
-            <li><span class="storage-amount">20</span> GB of storage</li>
-            <li>Priority email support</li>
-            <li>Help center access</li>
-          </ul>
-          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Get Started</button>
-        </div>
-      </div> 
-      
-    </div>
-  </div>
+
+    <button onclick="getElementById('time').innerHTML=Date()">What is the time?</button>
+    <button id="btn" onclick="showhide()">Show&Hide Paragraph</button>
+    <script>
+
+        function showhide()
+        {  
+           var div = document.getElementById("paragraf");
+                if (div.style.display !== "block") {
+                    div.style.display = "block";
+                }
+                else {
+                div.style.display = "none";
+                }
+        }  
+
+    </script>
+
+
 </body>
 </html>
